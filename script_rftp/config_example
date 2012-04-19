@@ -1,0 +1,55 @@
+# nersc-diskpt-3
+env RFTPDRC=/home/ren/rftp/config/rftpdrc /home/ren/rftp/bin/rftpd -D
+
+# anl-mempt-3
+env RCFTPRC=/home/ren/rftp/config/rcftprc /home/ren/rftp/bin/rcftp -n -i -v < /home/ren/rftp/task/rput-zero
+
+
+# srv365-05 server
+env RFTPDRC=/home/ren/rftp/config/rftpdrc /home/ren/rftp/bin/rftpd -D
+
+# srv365-01 client
+env RCFTPRC=/home/ren/rftp/config/rcftprc /home/ren/rftp/bin/rcftp -n -i -v < /home/ren/rftp/task/rput-zero
+
+# client side config
+
+cbufsiz = 10M
+cbufnum = 200
+usesendfile = no
+usesplice = no
+devzerosiz = 200G
+rmtaddrnum = 500
+evbufnum = 500
+recvbufnum = 500
+rcstreamnum = 10
+readernum = 4
+writernum = 1
+ioengine = sync
+directio = yes
+rdma_qp_sq_depth = 1280
+rdma_qp_rq_depth = 1280
+rdma_cq_depth = 2000
+wceventnum = 500
+wcthreadnum = 8
+
+
+# server side config
+
+cbufsiz = 10M
+cbufnum = 100
+srvcomport = 9987
+usesplice = no
+devzerosiz = 10G
+rmtaddrnum = 200
+evbufnum = 500
+recvbufnum = 500
+readernum = 1
+writernum = 8
+ioengine = sync
+directio = yes
+rdma_qp_sq_depth = 1280
+rdma_qp_rq_depth = 1280
+rdma_cq_depth = 2000
+wceventnum = 600
+wcthreadnum = 8
+
