@@ -1,5 +1,7 @@
 #! /bin/bash
 
+User=tanli
+
 #Paths 
 configdir=/home/tanli/rftp/config
 taskdir=/home/tanli/rftp/task

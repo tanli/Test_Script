@@ -1,5 +1,7 @@
 #! /bin/bash
 
+User=tanli
+
 BW_log_dir=/home/tanli/gridftp/log/bw
 CPU_log_dir=/home/tanli/gridftp/log/cpu
 

@@ -1,6 +1,6 @@
 #! /bin/bash
 
-killall -u tanli rftpd
-killall -u tanli nmon
+killall -u $User rftpd
+killall -u $User nmon
 rm -f *.nmon
 

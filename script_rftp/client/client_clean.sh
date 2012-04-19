@@ -1,6 +1,6 @@
 #! /bin/bash
 
-killall -u tanli rcftp
-killall -u tanli nmon
+killall -u $User rcftp
+killall -u $User nmon
 rm -f *.nmon
 rm -rf ../log/*

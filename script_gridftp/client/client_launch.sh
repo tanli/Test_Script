@@ -33,4 +33,7 @@ do
  sleep 5
  done
 done
+
+killall -u $User nmon
+
 exit

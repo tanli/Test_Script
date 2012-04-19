@@ -1,6 +1,8 @@
 #! /bin/bash
 
-killall globus-url-copy
-killall nmon
+source ./define.sh
+
+killall -u $User globus-url-copy
+killall -u $User nmon
 rm -f *.nmon
 rm -rf ../log/*
