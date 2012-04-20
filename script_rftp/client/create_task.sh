@@ -38,7 +38,7 @@ do
 
 
 
- echo "open $IB_port1 $p" >> $taskdir/rput-c$c
+ echo "open $IB_port1 $p" > $taskdir/rput-c$c
  echo "user ftp ftp" >> $taskdir/rput-c$c
  echo "bin" >> $taskdir/rput-c$c
  echo "prompt" >> $taskdir/rput-c$c
