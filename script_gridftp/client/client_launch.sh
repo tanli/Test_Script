@@ -10,8 +10,8 @@ if [ ! -d "$BW_log_dir" ]; then
 # rm -rf $ftplogdir/*
 fi
 
-if [ ! -d "$CPU_log_dir" ]; then
- mkdir -p $CPU_log_dir
+if [ ! -d "$time_log_dir" ]; then
+ mkdir -p $time_log_dir
 #else
 # rm -rf $cpulogdir/*
 fi
@@ -24,10 +24,12 @@ do
  echo "==================================================================="
  echo "GridFTP test: block_sz=$blk_sz, stream_num=$str_num"
  echo "globus-url-copy -vb -nodcau -fast -t $Trans_Time -bs $blk_sz -tcp-bs 60MB -p $str_num -pp file:///dev/zero ftp://$Serv_IP:$Port/dev/null >> $BW_log_dir/bw_log-b$blk_sz-s$str_num 2>&1 &"
+ date "+%F %T" >> $time_log_dir/datetime_start.log
  globus-url-copy -vb -nodcau -fast -t $Trans_Time -bs $blk_sz -tcp-bs 60MB -p $str_num -pp file:///dev/zero ftp://$Serv_IP:$Port/dev/null >> $BW_log_dir/bw_log-b$blk_sz-s$str_num 2>&1 &
  pid=$!
  #/home/tanli/rftp/bin/proccpuusage $pid > $CPU_log_dir/cpu_log-b$blk_sz-s$str_num 2>&1
  wait $pid
+ date "+%F %T" >> $time_log_dir/datetime_end.log
  echo "case finished....."
  echo "==================================================================="
  sleep 5

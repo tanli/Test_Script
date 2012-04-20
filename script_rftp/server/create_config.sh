@@ -15,11 +15,11 @@ do
  fi
 
  if [ $p = "18140" ]; then
-  n=100
+  n=200
  fi
 
  if [ $p = "18141" ]; then
-  n=10
+  n=20
  fi
 
 # touch $configdir/rftpdrc-b$c-p18139-dno

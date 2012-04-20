@@ -2,7 +2,6 @@
 
 source ./define.sh
 
-killall -u $User rftpd
+killall -u $User globus-gridftp-server
 killall -u $User nmon
 rm -f *.nmon
-
