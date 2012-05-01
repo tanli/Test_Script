@@ -1,0 +1,12 @@
+Connected to 192.168.140.13.
+220 nersc-diskpt-3.testbed100.es.net FTP server (Version 0.15/Linux-0.15-rc3) ready.
+331 Guest login ok, type your name as password.
+230- ftp100.nersc-diskpt-3.a
+230 Guest login ok, access restrictions apply.
+200 Type set to I.
+Interactive mode on.
+Local directory now /home/tanli/rftp/data/source
+250 CWD command successful.
+local: zero remote: zero
+200 RADR command successful.
+150 Opening BINARY mode data connection for 'zero'.
