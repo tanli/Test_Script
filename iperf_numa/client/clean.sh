@@ -1,6 +1,6 @@
 #! /bin/bash
 
-log_dir=/home/tanli/test/iperf_test/dell_numa/log
+log_dir=./log
 
-rm -rf $log_dir/*
+rm -rf $log_dir/* *.txt
 killall -u tanli iperf
